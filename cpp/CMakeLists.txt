@@ -2,10 +2,12 @@ cmake_minimum_required(VERSION 3.10)
 project(optical_flow_ball_cpp)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRE ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-find_package(openCV Required)
+find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(optical_flow_ball main.cpp)
-target_link_libraries(optical_flow_ball ${OpenCV_LIBS})
+add_executable(app main.cpp)
+target_link_libraries(app ${OpenCV_LIBS})
+target_include_directories(app PRIVATE ${OpenCV_INCLUDE_DIRS})
