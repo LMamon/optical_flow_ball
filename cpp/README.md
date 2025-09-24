@@ -14,7 +14,7 @@ the ball reacts only to motion detected within its region of interest (ROI), cre
 
 ### Build
 ```bash
-# from repo root
+# from cpp folder
 mkdir build
 cd build
 cmake ../cpp
